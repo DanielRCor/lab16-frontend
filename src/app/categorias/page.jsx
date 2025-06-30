@@ -36,7 +36,7 @@ export default function CategoriasPage() {
           className="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-2 rounded-md flex items-center gap-1 transition-colors text-sm"
           onClick={() => router.push('/categorias/new')}
         >
-          ➕ Nueva Categoría
+          Agregar Nueva Categoría
         </button>
       </div>
 

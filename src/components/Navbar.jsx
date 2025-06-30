@@ -8,8 +8,9 @@ export default function Navbar() {
   
   const isActive = (href) => pathname === href;
 
+  // Cambia el gradiente a tonalidades verdes, comunes en farmacias
   return (
-    <nav className="bg-gradient-to-r from-indigo-700 to-blue-600 shadow-lg">
+    <nav className="bg-gradient-to-r from-emerald-600 to-green-500 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -39,7 +40,7 @@ function NavLink({ href, active, children }) {
   return (
     <li>
       <Link href={href} passHref>
-        <span className={`${active ? 'bg-blue-400' : 'hover:bg-blue-400'} px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors`}>
+        <span className={`${active ? 'bg-green-300' : 'hover:bg-green-200'} px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors`}>
           {children}
         </span>
       </Link>
