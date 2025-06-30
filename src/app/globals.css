@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4fbf6;          /* Verde claro, ambiente fresco de farmacia */
+  --foreground: #14532d;          /* Verde oscuro, legible y natural */
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #092315;        /* Verde muy oscuro para modo oscuro */
+    --foreground: #e9f8ec;        /* Verde claro y suave para texto */
   }
 }
 
