@@ -1,4 +1,4 @@
-const BASE_URL = 'https://lab16-backend-production.up.railway.app';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 // PRODUCTOS
 export async function getProductos() {
