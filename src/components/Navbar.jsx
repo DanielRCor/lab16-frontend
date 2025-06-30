@@ -8,17 +8,20 @@ export default function Navbar() {
   
   const isActive = (href) => pathname === href;
 
-  // Cambia el gradiente a tonalidades verdes, comunes en farmacias
+  // Nuevo diseño: fondo blanco, bordes suaves, icono cruz farmacia y verde-acqua
   return (
-    <nav className="bg-gradient-to-r from-emerald-600 to-green-500 shadow-lg">
+    <nav className="bg-white border-b-2 border-emerald-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <span className="text-white text-xl font-bold">Sistema de Farmacia</span>
+          <div className="flex items-center gap-3">
+            <span className="text-emerald-600 text-2xl">✚</span>
+            <span className="text-emerald-700 text-xl font-bold tracking-wide">
+              Sistema de Farmacia
+            </span>
           </div>
 
           <div className="hidden md:block">
-            <ul className="ml-10 flex items-center space-x-8">
+            <ul className="ml-10 flex items-center space-x-4">
               <NavLink href="/" active={isActive('/')}>
                 Inicio
               </NavLink>
@@ -40,7 +43,12 @@ function NavLink({ href, active, children }) {
   return (
     <li>
       <Link href={href} passHref>
-        <span className={`${active ? 'bg-green-300' : 'hover:bg-green-200'} px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors`}>
+        <span className={`
+          px-4 py-2 rounded-full text-sm font-semibold cursor-pointer transition 
+          ${active 
+            ? "bg-emerald-100 text-emerald-700 border border-emerald-400 shadow-md" 
+            : "text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"}
+        `}>
           {children}
         </span>
       </Link>
